@@ -1,0 +1,39 @@
+[gd_scene load_steps=5 format=3 uid="uid://b2xpik5r1ojlt"]
+
+[ext_resource type="Script" path="res://screan/plaer/player.gd" id="1_7l4tf"]
+[ext_resource type="Texture2D" uid="uid://ddwm6re6saajq" path="res://screan/plaer/Art2/New Piskel (4).png" id="1_7ymuq"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_cgx0u"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_7ymuq")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_1yv0w"]
+radius = 6.0
+
+[node name="Player" type="CharacterBody2D" groups=["player"]]
+position = Vector2(59, 54)
+script = ExtResource("1_7l4tf")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(1, 0)
+sprite_frames = SubResource("SpriteFrames_cgx0u")
+animation = &"Idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-2, 1)
+shape = SubResource("CircleShape2D_1yv0w")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(5, 5)
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 30.851
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

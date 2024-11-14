@@ -1,0 +1,38 @@
+[gd_scene load_steps=6 format=3 uid="uid://cqvuhilkynrug"]
+
+[ext_resource type="Texture2D" uid="uid://dah8sfo1b7xtx" path="res://screan/slizen/New Piskel (9).png" id="1_6iy48"]
+[ext_resource type="Script" path="res://screan/slizen/slizen.gd" id="1_r03ao"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4h6ar"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_6iy48")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_uuv02"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_dwqli"]
+radius = 12.0416
+
+[node name="slizen" type="CharacterBody2D"]
+script = ExtResource("1_r03ao")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(2.96, 3.075)
+sprite_frames = SubResource("SpriteFrames_4h6ar")
+animation = &"Idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_uuv02")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_dwqli")
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]

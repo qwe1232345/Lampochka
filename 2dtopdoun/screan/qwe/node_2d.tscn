@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=3 uid="uid://ch71rdx0ixygv"]
+
+[ext_resource type="Texture2D" uid="uid://df7eu3hv7u1ar" path="res://screan/plaer/Art2/4645.jpg" id="1_yhhbn"]
+
+[node name="qwe" type="Node2D"]
+
+[node name="Label" type="Label" parent="."]
+offset_left = 155.0
+offset_top = 81.0
+offset_right = 648.0
+offset_bottom = 343.0
+text = "Вы прошли игру!"
+
+[node name="4645" type="Sprite2D" parent="."]
+position = Vector2(492, 243)
+scale = Vector2(0.4625, 0.337115)
+texture = ExtResource("1_yhhbn")
