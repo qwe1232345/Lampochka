@@ -1,16 +1,41 @@
-[gd_scene load_steps=6 format=3 uid="uid://cqvuhilkynrug"]
+[gd_scene load_steps=11 format=3 uid="uid://cqvuhilkynrug"]
 
-[ext_resource type="Texture2D" uid="uid://dah8sfo1b7xtx" path="res://screan/slizen/New Piskel (9).png" id="1_6iy48"]
 [ext_resource type="Script" path="res://screan/slizen/slizen.gd" id="1_r03ao"]
+[ext_resource type="Texture2D" uid="uid://bpfdkg3hj5e8b" path="res://screan/slizen/New Piskel.png" id="2_gak6w"]
+[ext_resource type="Texture2D" uid="uid://cppgxr1w3xkhg" path="res://screan/slizen/New Piskel (1).png" id="3_dw35n"]
+[ext_resource type="Texture2D" uid="uid://swfprafgibwx" path="res://screan/slizen/New Piskel (2).png" id="4_ps5y1"]
+[ext_resource type="Texture2D" uid="uid://0lqhp1q0kwkt" path="res://screan/slizen/New Piskel (3).png" id="5_p2t0u"]
+[ext_resource type="Texture2D" uid="uid://cbm3fpmujbjie" path="res://screan/slizen/New Piskel (4).png" id="6_u5eqq"]
+[ext_resource type="Texture2D" uid="uid://dj36y0aj1jxy1" path="res://screan/slizen/New Piskel (5).png" id="7_6d32m"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_4h6ar"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_6iy48")
+"texture": ExtResource("7_6d32m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_u5eqq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_p2t0u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_ps5y1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_dw35n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_gak6w")
 }],
 "loop": true,
 "name": &"Idle",
+"speed": 5.0
+}, {
+"frames": [],
+"loop": true,
+"name": &"xyq",
 "speed": 5.0
 }]
 
@@ -26,6 +51,8 @@ script = ExtResource("1_r03ao")
 position = Vector2(2.96, 3.075)
 sprite_frames = SubResource("SpriteFrames_4h6ar")
 animation = &"Idle"
+autoplay = "Idle"
+frame_progress = 0.910245
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_uuv02")

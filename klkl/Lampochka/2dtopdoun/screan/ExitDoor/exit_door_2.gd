@@ -5,8 +5,7 @@ extends Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
-
+	position = get_parent().find_child("arr").get_child(randi_range(0,get_parent().find_child("arr").get_child_count() - 1)).position
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):

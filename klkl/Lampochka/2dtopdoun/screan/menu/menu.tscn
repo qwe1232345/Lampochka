@@ -1,9 +1,15 @@
-[gd_scene load_steps=2 format=3 uid="uid://drwt3bcyhxjq3"]
+[gd_scene load_steps=3 format=3 uid="uid://drwt3bcyhxjq3"]
 
 [ext_resource type="Script" path="res://screan/menu/menu.gd" id="1_bujlj"]
+[ext_resource type="Texture2D" uid="uid://bimw8ktyv7i2f" path="res://screan/Level/3e6764e35add11eebf203abd0be4d755_upscaled.jpeg" id="2_oiab5"]
 
 [node name="menu" type="Node2D"]
 script = ExtResource("1_bujlj")
+
+[node name="3e6764e35Add11Eebf203Abd0Be4d755Upscaled" type="Sprite2D" parent="."]
+position = Vector2(582, 316)
+scale = Vector2(1.14648, 0.695313)
+texture = ExtResource("2_oiab5")
 
 [node name="play" type="Button" parent="."]
 offset_left = 473.0
@@ -23,6 +29,14 @@ text = "quit"
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(576, 326)
+
+[node name="Label" type="Label" parent="."]
+offset_left = 402.0
+offset_top = 71.0
+offset_right = 738.0
+offset_bottom = 140.0
+theme_override_font_sizes/font_size = 50
+text = "арбузофобия"
 
 [connection signal="pressed" from="play" to="." method="_on_play_pressed"]
 [connection signal="pressed" from="quit" to="." method="_on_quit_pressed"]
